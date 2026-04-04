@@ -1,0 +1,10 @@
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  movies_file: movies.csv
+  ratings_file: ratings.csv
+
+tfidf:
+  min_df: 2
+  max_df: 0.8
+  ngram_range: [1, 2]
