@@ -158,49 +158,47 @@ Tasks:
 - `notebooks/`: EDA and feature exploration notebooks.
 - `src/`: source code split by responsibility.
 
-
+```text
 video_rec_system/
-│
-├── configs/                  # (6) Tách Config: Chứa các tham số cấu hình
-│   ├── data_config.yaml      # Cấu hình đường dẫn data, ngưỡng min_df/max_df cho TF-IDF
-│   └── model_config.yaml     # Cấu hình tham số SVD (n_factors), trọng số alpha, k (Top-K)
-│
-├── data/                     # (6) Tách Assets: Chứa dữ liệu (Thêm vào .gitignore)
-│   ├── raw/                  # Dữ liệu gốc tải về từ Kaggle/TMDB (không bao giờ sửa)
-│   └── processed/            # Dữ liệu sau khi làm sạch, User-Item Matrix (.npz, .csv)
-│
-├── artifacts/                # (6) Tách Assets: Chứa các file sinh ra từ mô hình
-│   ├── tfidf_vectorizer.pkl  # Lưu mô hình TF-IDF đã fit
-│   ├── similarity_matrix.npz # Ma trận Cosine Similarity (Pre-computed)
-│   └── svd_model.pkl         # Trọng số mô hình SVD
-│
-├── notebooks/                # (5) Không lồng sâu: Phục vụ EDA nhanh (Ngày 1 & 2)
+├── configs/
+│   ├── data_config.yaml
+│   └── model_config.yaml
+├── data/
+│   ├── raw/
+│   │   └── .gitkeep
+│   └── processed/
+│       └── .gitkeep
+├── artifacts/
+│   ├── tfidf_vectorizer.pkl
+│   ├── similarity_matrix.npz
+│   └── svd_model.pkl
+├── docs/
+│   └── images/
+│       └── .gitkeep
+├── notebooks/
 │   ├── 01_eda_and_cleaning.ipynb
 │   └── 02_feature_exploration.ipynb
-│
-├── src/                      # (6) Tách Logic & (3) Phân chia chức năng
-│   │
-│   ├── data/                 # Xử lý luồng dữ liệu (Ngày 1)
-│   │   ├── make_dataset.py   # Script gộp, làm sạch missing/outliers
-│   │   └── dataloader.py     # (7) Đặt gần nơi dùng: Hàm load data cho các module khác
-│   │
-│   ├── features/             # Trích xuất đặc trưng (Ngày 2 & 3)
-│   │   ├── content_feat.py   # Logic TF-IDF, text preprocessing
-│   │   └── collab_feat.py    # Logic tạo Sparse Matrix từ logs
-│   │
-│   ├── models/               # Huấn luyện và Suy luận (Ngày 4 & 5)
-│   │   ├── content_based.py  # Logic tính toán và truy vấn Cosine Similarity
-│   │   └── collaborative.py  # Logic train SVD/Item-KNN và dự đoán rating
-│   │
-│   ├── pipeline/             # Tích hợp hệ thống (Ngày 6)
-│   │   └── hybrid_engine.py  # Ghép nối Content và Collab, áp dụng Min-Max Scaler và alpha
-│   │
-│   └── evaluation/           # Đánh giá mô hình (Ngày 7)
-│       └── metrics.py        # Các hàm tính NDCG@K, RMSE
-│
-├── main.py                   # Điểm entry-point duy nhất để chạy toàn bộ pipeline
-├── requirements.txt          # Chứa dependencies (pandas, scikit-learn, scipy, surprise)
-└── README.md                 # Tài liệu hướng dẫn setup và chạy code
+├── src/
+│   ├── data/
+│   │   ├── make_dataset.py
+│   │   └── dataloader.py
+│   ├── features/
+│   │   ├── content_feat.py
+│   │   └── collab_feat.py
+│   ├── models/
+│   │   ├── content_based.py
+│   │   └── collaborative.py
+│   ├── pipeline/
+│   │   └── hybrid_engine.py
+│   └── evaluation/
+│       └── metrics.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+Lưu ý:
+- GitHub không lưu thư mục rỗng, vì vậy dùng `.gitkeep` để giữ cấu trúc thư mục khi push.
 
 ## Quick start
 
