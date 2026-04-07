@@ -20,6 +20,8 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/tfidf_matrix.npz
+!data/processed/tfidf_matrix.pkl
 
 # Model artifacts (keep folder structure)
 artifacts/*
