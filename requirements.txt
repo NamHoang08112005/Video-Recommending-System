@@ -4,3 +4,6 @@ scikit-learn
 scipy
 scikit-surprise
 PyYAML
+pyarrow
+scipy
+matplotlib

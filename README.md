@@ -203,6 +203,31 @@ Lưu ý:
 ## Quick start
 
 1. Create a virtual environment.
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment:
+
+Windows (PowerShell):
+
+```bash
+.venv\Scripts\Activate.ps1
+```
+
+Windows (Command Prompt):
+
+```bash
+.venv\Scripts\activate.bat
+```
+
+macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
 2. Install dependencies:
 
 ```bash
@@ -216,3 +241,4 @@ python main.py
 ```
 
 
+## Thông tin dữ liệu sau khi xử lý 
