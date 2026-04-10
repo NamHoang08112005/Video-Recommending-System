@@ -7,3 +7,4 @@ PyYAML
 pyarrow
 scipy
 matplotlib
+lightgbm
