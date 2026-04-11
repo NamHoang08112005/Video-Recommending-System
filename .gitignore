@@ -23,5 +23,4 @@ data/raw/*
 !data/processed/tfidf_matrix.pkl
 
 # Model artifacts (keep folder structure)
-artifacts/*
 !artifacts/.gitkeep

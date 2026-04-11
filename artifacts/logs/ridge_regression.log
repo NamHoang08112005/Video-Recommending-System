@@ -1,0 +1,13 @@
+
+==========================================================================================
+timestamp: 2026-04-11T21:08:49
+model: Ridge Regression
+train_set: train_warm_ratings | n_samples=8582160 | n_features=200
+tracked_test: test_warm_ratings | n_samples=2145434
+untracked_test: cold_ratings | n_samples=684649
+tracked_metrics: {"rmse": 0.856289161009361, "mae": 0.6597284078598022, "r2": -0.042200565338134766}
+tracked_r2: -0.042201
+untracked_metrics: {"rmse": 0.9537063764142387, "mae": 0.7515289783477783, "r2": -0.5822927951812744}
+untracked_r2: -0.582293
+extra: {"alpha": 1.0, "solver": "auto", "max_iter": null}
+==========================================================================================

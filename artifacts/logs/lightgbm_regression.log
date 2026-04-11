@@ -1,0 +1,13 @@
+
+==========================================================================================
+timestamp: 2026-04-11T21:20:39
+model: LightGBM Regression
+train_set: train_warm_ratings | n_samples=8582160 | n_features=200
+tracked_test: test_warm_ratings | n_samples=2145434
+untracked_test: cold_ratings | n_samples=684649
+tracked_metrics: {"rmse": 0.8386846068242471, "mae": 0.6440443309835758, "r2": 0.00021235821086074136}
+tracked_r2: 0.000212
+untracked_metrics: {"rmse": 0.7582663460001501, "mae": 0.5755237857062162, "r2": -0.00023269748565657444}
+untracked_r2: -0.000233
+extra: {"best_iteration": 17, "best_score": {"train": {"rmse": 0.8694071992419801}, "tracked_valid": {"rmse": 0.8386846068242454}}}
+==========================================================================================
