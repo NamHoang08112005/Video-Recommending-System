@@ -1,0 +1,26 @@
+
+==========================================================================================
+timestamp: 2026-04-12T10:58:19
+model: Linear Regression
+train_set: train_warm_ratings | n_samples=8582160 | n_features=200
+tracked_test: test_warm_ratings | n_samples=2145434
+untracked_test: cold_ratings | n_samples=684649
+tracked_metrics: {"rmse": 0.8563492306757786, "mae": 0.6597805023193359, "r2": -0.042346835136413574}
+tracked_r2: -0.042347
+untracked_metrics: {"rmse": 0.9543830511007109, "mae": 0.7520723938941956, "r2": -0.5845389366149902}
+untracked_r2: -0.584539
+extra: {"fit_intercept": true, "copy_X": true, "n_jobs": -1}
+==========================================================================================
+
+==========================================================================================
+timestamp: 2026-04-12T12:15:53
+model: Linear Regression
+train_set: train_warm_ratings | n_samples=8582160 | n_features=200
+tracked_test: test_warm_ratings | n_samples=2145434
+untracked_test: cold_ratings | n_samples=684649
+tracked_metrics: {"rmse": 0.8563492306757786, "mae": 0.6597805023193359, "r2": -0.042346835136413574}
+tracked_r2: -0.042347
+untracked_metrics: {"rmse": 0.9543830511007109, "mae": 0.7520723938941956, "r2": -0.5845389366149902}
+untracked_r2: -0.584539
+extra: {"fit_intercept": true, "copy_X": true, "n_jobs": -1}
+==========================================================================================
