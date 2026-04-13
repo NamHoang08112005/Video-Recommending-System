@@ -18,9 +18,13 @@ env/
 # Data assets (keep folder structure)
 data/raw/*
 !data/raw/.gitkeep
+data/processed/*
 !data/processed/.gitkeep
-!data/processed/tfidf_matrix.npz
-!data/processed/tfidf_matrix.pkl
 
-# Model artifacts (keep folder structure)
+# Model artifacts and caches (keep folder structure)
+artifacts/logs/*
+artifacts/split_cache/*
+artifacts/top_k_results.pkl
 !artifacts/.gitkeep
+!artifacts/split_cache/.gitkeep
+!artifacts/similarity_matrix.npz

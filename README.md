@@ -152,11 +152,10 @@ Tasks:
 ## Structure
 
 - `configs/`: YAML configurations for data and model settings.
-- `data/raw/`: immutable source data.
-- `data/processed/`: cleaned data and matrices.
-- `artifacts/`: trained models and precomputed assets.
-- `notebooks/`: EDA and feature exploration notebooks.
-- `src/`: source code split by responsibility.
+- `data/raw/`: immutable source data (raw CSV files).
+- `data/processed/`: cleaned data and feature matrices.
+- `artifacts/`: precomputed similarity matrices and training artifacts.
+- `notebooks/`: exploratory data analysis and model training notebooks.
 
 ```text
 video_rec_system/
@@ -165,40 +164,38 @@ video_rec_system/
 │   └── model_config.yaml
 ├── data/
 │   ├── raw/
-│   │   └── .gitkeep
+│   │   ├── credits.csv
+│   │   ├── keywords.csv
+│   │   ├── links_small.csv
+│   │   ├── links.csv
+│   │   ├── movies_metadata.csv
+│   │   ├── ratings_small.csv
+│   │   └── ratings.csv
 │   └── processed/
-│       └── .gitkeep
+│       ├── cold_movies_matrix.npz
+│       ├── cold_ratings_matrix.npz
+│       ├── movies_matrix.npz
+│       ├── ratings_matrix.npz
+│       ├── test_warm_ratings_matrix.npz
+│       ├── train_warm_movies_matrix.npz
+│       └── train_warm_ratings_matrix.npz
 ├── artifacts/
-│   ├── tfidf_vectorizer.pkl
 │   ├── similarity_matrix.npz
-│   └── svd_model.pkl
+│   ├── logs/
+│   └── split_cache/
+│       ├── tracked_test.npz
+│       ├── train.npz
+│       └── untracked_test.npz
 ├── docs/
 │   └── images/
-│       └── .gitkeep
 ├── notebooks/
-│   ├── 01_eda_and_cleaning.ipynb
-│   └── 02_feature_exploration.ipynb
-├── src/
-│   ├── data/
-│   │   ├── make_dataset.py
-│   │   └── dataloader.py
-│   ├── features/
-│   │   ├── content_feat.py
-│   │   └── collab_feat.py
-│   ├── models/
-│   │   ├── content_based.py
-│   │   └── collaborative.py
-│   ├── pipeline/
-│   │   └── hybrid_engine.py
-│   └── evaluation/
-│       └── metrics.py
+│   ├── 01_Cleaning_Data.ipynb
+│   ├── 02_Finding similar videos.ipynb
+│   └── 03_Trainning user_based_recommeding_model.ipynb
 ├── main.py
 ├── requirements.txt
 └── README.md
 ```
-
-Lưu ý:
-- GitHub không lưu thư mục rỗng, vì vậy dùng `.gitkeep` để giữ cấu trúc thư mục khi push.
 
 ## Quick start
 
